@@ -16,6 +16,8 @@
 		A48B071325227F2200CA4117 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A48B071125227F2200CA4117 /* LaunchScreen.storyboard */; };
 		A48B071E25227F2200CA4117 /* VoiceRecognitionGUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48B071D25227F2200CA4117 /* VoiceRecognitionGUITests.swift */; };
 		A48B072925227F2200CA4117 /* VoiceRecognitionGUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48B072825227F2200CA4117 /* VoiceRecognitionGUIUITests.swift */; };
+		A4DD3165252E78E30078F1D5 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DD3164252E78E30078F1D5 /* AudioManager.swift */; };
+		A4DD3169252E85570078F1D5 /* ServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DD3168252E85570078F1D5 /* ServerManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		A48B072425227F2200CA4117 /* VoiceRecognitionGUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VoiceRecognitionGUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A48B072825227F2200CA4117 /* VoiceRecognitionGUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceRecognitionGUIUITests.swift; sourceTree = "<group>"; };
 		A48B072A25227F2200CA4117 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4DD3164252E78E30078F1D5 /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
+		A4DD3168252E85570078F1D5 /* ServerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,8 @@
 				A48B071425227F2200CA4117 /* Info.plist */,
 				A48B070725227F1F00CA4117 /* VoiceRecognitionGUI.xcdatamodeld */,
 				A48B070E25227F2200CA4117 /* Preview Content */,
+				A4DD3164252E78E30078F1D5 /* AudioManager.swift */,
+				A4DD3168252E85570078F1D5 /* ServerManager.swift */,
 			);
 			path = VoiceRecognitionGUI;
 			sourceTree = "<group>";
@@ -273,6 +279,8 @@
 				A48B070425227F1E00CA4117 /* AppDelegate.swift in Sources */,
 				A48B070625227F1E00CA4117 /* SceneDelegate.swift in Sources */,
 				A48B070B25227F1F00CA4117 /* ContentView.swift in Sources */,
+				A4DD3165252E78E30078F1D5 /* AudioManager.swift in Sources */,
+				A4DD3169252E85570078F1D5 /* ServerManager.swift in Sources */,
 				A48B070925227F1F00CA4117 /* VoiceRecognitionGUI.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
