@@ -14,7 +14,7 @@ class AudioManager: ObservableObject {
     var audioRecorder : AVAudioRecorder!
     var audioSession : AVAudioSession!
     
-    var audioFileUrl = URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent("recordedAudio.m4a")
+    var audioFileUrl = URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent("recordedAudio.wav")
     
     deinit {
         try? FileManager.default.removeItem(at: audioFileUrl)
@@ -25,7 +25,6 @@ class AudioManager: ObservableObject {
             audioPlayer = try AVAudioPlayer(contentsOf: audioFileUrl)
             audioPlayer?.prepareToPlay()
             audioPlayer?.play()
-
         }
         catch {
             print(error.localizedDescription)
@@ -34,17 +33,15 @@ class AudioManager: ObservableObject {
     
     func startRecordingAudioClip() {
         let recordingSettings = [
-            AVFormatIDKey : Int(kAudioFormatMPEG4AAC),
-            AVSampleRateKey : 12000,
+            AVFormatIDKey : Int(kAudioFormatLinearPCM),
+            AVSampleRateKey : 16000,
             AVNumberOfChannelsKey : 1,
             AVEncoderAudioQualityKey : AVAudioQuality.high.rawValue
         ]
         
         do {
             self.audioRecorder = try AVAudioRecorder(url: audioFileUrl, settings: recordingSettings)
-            
             self.audioRecorder.record()
-            
         }
         catch {
             print(error.localizedDescription)
@@ -65,7 +62,6 @@ class AudioManager: ObservableObject {
                 if(!selectedOption) {
                     returnValue.toggle()
                 }
-                
             }
         }
         catch{
@@ -74,5 +70,4 @@ class AudioManager: ObservableObject {
         
         return returnValue
     }
-    
 }

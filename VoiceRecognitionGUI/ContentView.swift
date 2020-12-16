@@ -53,11 +53,11 @@ struct AppView: View {
                             serverMessage in
                             
                             self.statusText = "Checked."
-                            if serverMessage.status {
-                                self.resultText = "Voice known. Hello " + serverMessage.name + "!"
+                            if serverMessage.probability > 50 {
+                                self.resultText = "Voice known. Probability: " + String(serverMessage.probability) + "%. Hello " + serverMessage.name + "!"
                             }
                             else {
-                                self.resultText = "Voice unknown."
+                                self.resultText = "Voice unknown. Probability: " + String(serverMessage.probability) + "%."
                             }
                         }
                         
